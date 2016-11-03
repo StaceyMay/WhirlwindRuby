@@ -41,3 +41,22 @@ if sam_cook > 10
     end
   end
 end
+
+3
+
+accounts = []
+
+5.times do |person|
+  person = {}
+  puts "Enter First Name:"
+    person[:first_name] = gets.chomp
+  puts "Enter Last Name:"
+    person[:last_name] = gets.chomp
+  puts "Enter Email"
+    person[:email] = gets.chomp
+  accounts << person
+end
+
+p accounts  
+
+
