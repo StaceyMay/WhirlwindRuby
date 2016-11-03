@@ -42,21 +42,27 @@ if sam_cook > 10
   end
 end
 
-3
+#3
 
 accounts = []
 
 5.times do |person|
   person = {}
   puts "Enter First Name:"
-    person[:first_name] = gets.chomp
+  person[:first_name] = gets.chomp
   puts "Enter Last Name:"
-    person[:last_name] = gets.chomp
+  person[:last_name] = gets.chomp
   puts "Enter Email"
-    person[:email] = gets.chomp
+  person[:email] = gets.chomp
+  person[:account_number] = [*(0..10)].sample(10).join
   accounts << person
 end
 
-p accounts  
+accounts.each do |account|
+  puts "First Name: " + account[:first_name]
+  puts "Last Name: " + account[:last_name]
+  puts "Email: " + account[:email]
+  puts "Account Number: " + account[:account_number]
+end 
 
 
