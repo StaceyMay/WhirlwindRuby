@@ -65,4 +65,24 @@ accounts.each do |account|
   puts "Account Number: " + account[:account_number]
 end 
 
+# final
 
+group_odd = []
+group_even = []
+counter = 1
+3.times do |person|
+  person = {}
+  puts "Enter First Name:"
+  person[:first_name] = gets.chomp
+  puts "Enter Last Name:"
+  person[:last_name] = gets.chomp
+  if counter.odd?
+    group_odd << person
+  else
+    group_even << person
+  end
+  counter += 1
+end
+
+p group_odd
+p group_even
