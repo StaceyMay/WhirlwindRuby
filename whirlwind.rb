@@ -1,9 +1,13 @@
 #1
 
 foods = []
-2.times do
+5.times do
   puts "Enter Favorite Food:"
   foods <<gets.chomp
+end
+
+foods.each do |food|
+  puts " I love #{food}"
 end
 
 counter = 0
@@ -31,16 +35,14 @@ sam_crepes = true
 sally_french = true
 
 
-if sam_cook > 10
-  if sally_speak > 5
-    puts "Sam and Sally should date"
-    if sam_crepes == true
-      if sally_french == true
-        puts "They should marry"
-      end
-    end
-  end
+if sam_cook > 10 && if sally_speak > 5
+  puts "Sam and Sally should date"
+end 
+if sam_crepes == true || if sally_french == true
+  puts "They should marry"
 end
+  
+
 
 #3
 
@@ -65,7 +67,7 @@ accounts.each do |account|
   puts "Account Number: " + account[:account_number]
 end 
 
-# final
+final
 
 group_odd = []
 group_even = []
@@ -86,3 +88,33 @@ end
 
 p group_odd
 p group_even
+
+
+people = []
+
+while true 
+  puts "Give me a name:"
+  input_name = gets.chomp
+
+  if input_name == "done"
+    break
+  else
+    people << input_name
+  end
+end
+
+people.shuffle!
+
+while people.length > 0
+  if people.length ==(3)
+    group = people.pop(3)
+  else
+    group = people.pop(2)
+  end
+  puts "Group: #{group.join(', ')}"
+end
+
+
+
+
+
