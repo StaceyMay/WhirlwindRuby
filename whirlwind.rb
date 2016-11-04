@@ -1,7 +1,7 @@
 #1
 
 foods = []
-2.times do
+5.times do
   puts "Enter Favorite Food:"
   foods <<gets.chomp
 end
@@ -70,7 +70,7 @@ end
 group_odd = []
 group_even = []
 counter = 1
-3.times do |person|
+11.times do |person|
   person = {}
   puts "Enter First Name:"
   person[:first_name] = gets.chomp
