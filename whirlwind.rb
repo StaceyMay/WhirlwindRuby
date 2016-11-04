@@ -72,7 +72,7 @@ final
 group_odd = []
 group_even = []
 counter = 1
-3.times do |person|
+11.times do |person|
   person = {}
   puts "Enter First Name:"
   person[:first_name] = gets.chomp
